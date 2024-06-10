@@ -9,8 +9,14 @@
             rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous">
-    </head>
-    <body background="{{ url_for('static', filename='fondo.jpg') }}">
+    <style>
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+        
+</head>
+<body background="{{ url_for('static', filename='fondo.jpg') }}">
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -22,7 +28,7 @@
             <form method="post">
 
                 <center>
-                    <h1>APP DEL CLIMA</h1>
+                    <h1 style="color: rgb(0, 255, 115);">CONSULTA EL CLIMA</h1>"
                     <img src="{{ url_for('static', filename='logo.jpg') }}"
                         alt="logo del clima"   width="500">
 
