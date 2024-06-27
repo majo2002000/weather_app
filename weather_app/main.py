@@ -20,5 +20,30 @@ def hello():
 def curriculum():
     return render_template('hv.html')
  
+
+
+@app.route("/login", methods=['POST', 'GET'])
+def login():
+    if request.method== 'POST':
+      USUARIO='ADMIN@GMAIL.COM'
+      PASSWORD='ADMIN'
+      user= request.form.get("txtEmail")
+      password=request.form.get("txtPassword")
+      if USUARIO == user and PASSWORD == password:
+        return render_template('index.html')
+      else:
+        return render_template('login.html', error1 = True)
+    return render_template('login.html')
+
+@app.route("/registro", methods=['POST', 'GET'])
+def registro():
+   return render_template('registro.html')
+
+
+@app.errorhandler(404)
+def not_found(error):
+   return render_template('error.html'), 404
+
 if __name__=='__main__':
     app.run(debug = True)
+
